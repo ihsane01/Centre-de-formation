@@ -4,7 +4,7 @@
 <div class="container">
 
 <button class="btn btn-dark my-5" style="margin-right: 2vw"><a href="{{ route('add')}}" class="text-light" style = "text-decoration : none; margin-right: 8px">Add New employé </a></button>
-<button class="btn btn-dark my-5" > <a href="{{ route('registeremploye') }}"class="text-light"   style = "text-decoration : none; margin: 10px">register employé</a></button>
+
 
 <div style="margin-bottom: 20px;">
 <a href="{{Route('pdfListeAdministrateur')}}" class="btn btn-warning" style="margin-right: 2vw"><i class="fas fa-file-pdf"></i> Telecharger <b> PDF </b></a>

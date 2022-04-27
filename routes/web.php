@@ -25,6 +25,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/registerf', function () {
+    return view('Admin.registerformateur');})->name('registerf');
+
+
 // Route::get('/registerf', function () {
 //     return view('Admin.registerformateur');
 // })->name('registerf');
@@ -33,7 +37,7 @@ Route::get('/', function () {
 
 
 Route::get('/registerformateur', [App\Http\Controllers\UtilisateurController::class, 'createf'])->name('registerforma');
-Route::get('/registeremploye', [App\Http\Controllers\UtilisateurController::class, 'createemploye'])->name('registerempl');
+
 
 
 
@@ -76,12 +80,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/Listeformation', [generatePDF::class, 'ListeFormation'])->name('pdfListeFormation');
     Route::get('/ListeFormationExcel', [generatePDF::class, 'excelListeFormation'])->name('ListeFormationExcel');
 
-    Route::get('/registerf', function () {
-        return view('Admin.registerformateur');})->name('registerf');
-
-    Route::get('/registeremploye', function () {
-        return view('Admin.registeremploye');})->name('registeremploye');
-        
 
     Route::get('/gestionFormateurs', [App\Http\Controllers\AdministrateurController::class, 'listeformateur'])->name('listeformateur');
     Route::get('/Addfrm', [App\Http\Controllers\AdministrateurController::class, 'addf'])->name('addf');
